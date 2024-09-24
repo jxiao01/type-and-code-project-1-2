@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An educational site about organisms, their characteristics, and types.">
+    <title>Organisms - Discover the World of Living Entities</title>
+</head>
+
+<style>
+
+        nav a {
+            font-size: 2rem;
+            text-decoration: underline;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        nav a:active {
+            animation: detailedPopUp 2.5s ease forwards;
+        }
+
+        @keyframes detailedPopUp {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+                letter-spacing: normal;
+                filter: blur(0);
+                text-shadow: none;
+            }
+            10% {
+                transform: scale(1.3);
+                opacity: 0.9;
+                letter-spacing: 2px;
+                filter: blur(0.5px);
+                text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            }
+            30% {
+                transform: scale(1.8);
+                opacity: 0.7;
+                letter-spacing: 4px;
+                filter: blur(1px);
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            }
+            50% {
+                transform: scale(2.5);
+                opacity: 0.5;
+                letter-spacing: 8px;
+                filter: blur(2px);
+                text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+            }
+            70% {
+                transform: scale(3.2);
+                opacity: 0.3;
+                letter-spacing: 12px;
+                filter: blur(3px);
+                text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+                letter-spacing: 16px;
+                filter: blur(5px);
+                text-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+            }
+        }
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.8;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+nav a {
+  position: relative;
+  padding: 12px;
+  display: inline-block;
+  transition: all 0.4s ease;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  border-radius: 8px;
+  margin: 0 10px;
+  background-color: transparent;
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+section {
+  background: linear-gradient(135deg, #fff, #ddd);
+  border-radius: 12px;
+  padding: 60px;
+  margin: 30px auto;
+  max-width: 1200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.6s ease-in-out;
+  filter: grayscale(100%);
+}
+
+img:hover {
+  transform: scale(1.15) rotate(-2deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+p {
+  font-size: 1.2vw;
+  line-height: 1.8;
+  color: #444;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-bottom: 20px;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+section:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-title {
+  display: inline-block;
+}
+
+.animated-title span {
+  display: inline-block;
+  font-size: 10vw;
+  opacity: 0;
+  transform: translateX(0) translateY(0) rotate(100deg) scale(10);
+  animation: scatterAndAssemble 8s ease-in-out infinite, jitter 1.5s infinite alternate;
+  position:relative;
+}
+  
+
+.animated-title span:nth-child(1) { animation-delay: 0.1s; }
+.animated-title span:nth-child(2) { animation-delay: 0.2s; }
+.animated-title span:nth-child(3) { animation-delay: 0.3s; }
+.animated-title span:nth-child(4) { animation-delay: 0.4s; }
+.animated-title span:nth-child(5) { animation-delay: 0.5s; }
+.animated-title span:nth-child(6) { animation-delay: 0.6s; }
+.animated-title span:nth-child(7) { animation-delay: 0.7s; }
+.animated-title span:nth-child(8) { animation-delay: 0.8s; }
+.animated-title span:nth-child(9) { animation-delay: 0.9s; }
+.animated-title span:nth-child(10) { animation-delay: 1s; }
+.animated-title span:nth-child(11) { animation-delay: 1.1s; }
+.animated-title span:nth-child(12) { animation-delay: 1.2s; }
+.animated-title span:nth-child(13) { animation-delay: 1.3s; }
+.animated-title span:nth-child(14) { animation-delay: 1.4s; } 
+.animated-title span:nth-child(15) { animation-delay: 1.5s; }
+.animated-title span:nth-child(16) { animation-delay: 1.6s; }
+.animated-title span:nth-child(17) { animation-delay: 1.7s; }
+.animated-title span:nth-child(18) { animation-delay: 1.8s; }
+.animated-title span:nth-child(19) { animation-delay: 1.9s; }
+.animated-title span:nth-child(20) { animation-delay: 2s; }
+.animated-title span:nth-child(21) { animation-delay: 2.1s; }
+.animated-title span:nth-child(22) { animation-delay: 2.2s; }
+
+
+@keyframes scatterAndAssemble {
+  0% {
+    opacity: 0;
+    transform: translateX(100) translateY(50) rotate(10deg) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(200) translateY(60) rotate(20deg) scale(2);
+  }
+  80% {
+    opacity: 2;
+    transform: translateX(300) translateY(70) rotate(30deg) scale(3);
+  }
+  100% {
+    opacity: 3;
+    transform: translateX(400) translateY(80) rotate(40deg) scale(4);
+  }
+}
+
+@keyframes jitter {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  10% {
+    transform: translateX(-15px) translateY(3px) rotate(3deg);
+  }
+  20% {
+    transform: translateX(18px) translateY(-2px) rotate(-3deg);
+  }
+  30% {
+    transform: translateX(-13px) translateY(5px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(15px) translateY(-3px) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+h2, h3 {
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2vw;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+
+article {
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+article:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: #f5f5f5;
+}
+
+
+.interactive-header {
+  transition: 0.3s ease-in-out;
+}
+
+.draggable-title {
+  display: inline-block;
+  font-size: 10rem;
+  color: #000;
+  position: relative;
+  transition: transform 0.5s ease, font-size 0.5s ease;
+  cursor: grab;
+}
+
+.draggable-title:hover {
+  transform: translate(10px, 10px) rotate(5deg);
+  transition: transform 0.3s ease-out;
+  cursor: grabbing;
+}
+
+.draggable-title:active {
+  transform: translate(-15px, -15px) rotate(-3deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.grid-container {
+    animation: scaleUpDown 3s ease-in-out infinite alternate;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+
+
+
+</style>
+<body>
+
+
+    <h1 class="animated-title">
+        <span>U</span>
+        <span>N</span>
+        <span>D</span>
+        <span>E</span>
+        <span>R</span>
+        <span>S</span>
+        <span>T</span>
+        <span>A</span>
+        <span>N</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+        <span> </span>
+        <span>O</span>
+        <span>R</span>
+        <span>G</span>
+        <span>A</span>
+        <span>N</span>
+        <span>I</span>
+        <span>S</span>
+        <span>M</span>
+        <span>S</span>
+      </h1>
+
+      <header class="interactive-header" style="padding: 20px; text-align: center; color: #000;">
+        <h5 class="draggable-title" style="font-size: 5rem; margin-bottom: 10px;">Understanding Organisms</h5>
+    </header>
+
+
+<nav style="padding: 100px; text-align: center;">
+    <a href="#introduction" style="color: #000; text-decoration: underline; padding: 10px; margin: 0 10px;">Introduction</a>
+    <a href="#etymology" style="color: #000; text-decoration: underline; padding: 10px; margin: 0 10px;">Etymology</a>
+    <a href="#criteria" style="color: #000; text-decoration: underline; padding: 10px; margin: 0 10px;">Whether criteria exist, or are needed</a>
+    <a href="#organisation-levels" style="color: #000; text-decoration: underline; padding: 10px; margin: 0 10px;">Organisms at differing levels</a>
+    <a href="#boundary-cases" style="color: #000; text-decoration: underline; padding: 10px; margin: 0 10px;">Boundary cases</a>
+    <a href="#early-evolution-of-organisms" style="color: #000; text-decoration: underline; padding: 10px; margin: 0 10px;">Early evolution of organisms</a>
+    <a href="#references" style="color: #000; text-decoration: underline; padding: 10px; margin: 0 10px;">References</a>
+</nav>
+
+<div class="grid-container" style="margin: 20px auto; padding: 20px; max-width: 900px;">
+
+    <section id="introduction" class="grid-item">
+        <h2 style="font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #000;">Introduction</h2>
+        <p> An <strong>organism</strong> is defined in a medical dictionary as any living thing that functions as an <a href="https://en.wikipedia.org/wiki/Individual">individual</a>. Such a definition raises more problems than it solves, not least because the concept of an individual is also difficult. Many criteria, few of them widely accepted, have been proposed to define what an organism is. Among the most common is that an organism has autonomous reproduction, growth, and metabolism. This would exclude viruses, despite the fact that they evolve like organisms. Other problematic cases include colonial organisms; a colony of eusocial insects is organised adaptively, and has germ-soma specialisation, with some insects reproducing, others not, like cells in an animal's body. The body of a siphonophore, a jelly-like marine animal, is composed of organism-like zooids, but the whole structure looks and functions much like an animal such as a jellyfish, the parts collaborating to provide the functions of the colonial organism.</p>
+
+        <p>The evolutionary biologists David Queller and Joan Strassmann state that "organismality", the qualities or attributes that define an entity as an organism, has evolved socially as groups of simpler units (from cells upwards) came to cooperate without conflicts. They propose that cooperation should be used as the "defining trait" of an organism. This would treat many types of collaboration, including the fungus/alga partnership of different species in a lichen, or the permanent sexual partnership of an anglerfish, as an organism.</p>
+        <blockquote style="font-style: italic; color: #555; padding: 10px 20px; border-left: 3px solid #000; background-color: #f9f9f9;">“Life is the force that unifies us all—be it human, animal, plant, or microbe.”</blockquote>
+    </section>
+
+    <section id="etymology" class="grid-item">
+        <h2 style="font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #000;">Etymology</h2>
+        <p>The term "organism" (from the Ancient Greek ὀργανισμός, derived from órganon, meaning instrument, implement, tool, organ of sense or apprehension) first appeared in the English language in the 1660s with the now-obsolete meaning of an organic structure or organization. It is related to the verb "organize". In his 1790 Critique of Judgment, Immanuel Kant defined an organism as "both an organized and a self-organizing being".</p>
+        <blockquote style="font-style: italic; color: #555; padding: 10px 20px; border-left: 3px solid #000; background-color: #f9f9f9;">“In its essence, life is an instrument through which nature achieves balance and harmony.”</blockquote>
+    </section>
+
+    <section id="criteria" class="grid-item">
+        <h2 style="font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #000;">Whether criteria exist, or are needed</h2>
+        <div style="float: right; width: 250px; margin-left: 20px; border: 1px solid #ccc; padding: 10px; text-align: center;">
+        <figure>
+            <img src="Basilikumwurzling.jpg" alt="A basil plant cutting developing roots" style="max-width: 100%; height: auto; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 10px;"> 
+        </figure>
+            <p style="font-size: 0.9rem;">One criterion proposes that an organism cannot be divided without losing functionality. This basil plant cutting is however developing new adventitious roots from a small bit of stem, forming a new plant.</p>
+        </div>
+        <p>Among the criteria that have been proposed for being an organism are:</p>
+        
+        <ul style="padding-left: 20px; list-style-type: disc;">
+            <li style="padding-left: 5px;">Autonomous reproduction, growth, and metabolism</li>
+            <br>
+            <li style="padding-left: 5px;">Noncompartmentalibility – structure cannot be divided without losing functionality. Richard Dawkins stated this as "the quality of being sufficiently heterogeneous in form to be rendered non-functional if cut in half". However, many organisms can be cut into pieces which then grow into whole organisms.</li>
+            <br>
+            <li style="padding-left: 5px;">Individuality – the entity has simultaneous holdings of genetic uniqueness, genetic homogeneity and autonomy.</li>
+            <br>
+            <li style="padding-left: 5px;">Immune response – separating self from foreign.</li>
+            <br>
+            <li style="padding-left: 5px;">"Anti-entropy", the ability to maintain order, a concept first proposed by Erwin Schrödinger, or in another form, that Claude Shannon's information theory can be used to identify organisms as capable of self-maintaining their information content.</li>
+        </ul>
+
+        <p>Other scientists think that the concept of the organism is inadequate in biology, and that the concept of individuality is problematic. They question whether such a definition is necessary.
+
+        Problematic cases include colonial organisms: for instance, a colony of eusocial insects fulfills criteria such as adaptive organisation and germ-soma specialisation.If so, the same argument, or a criterion of high co-operation and low conflict, would include some mutualistic (e.g. lichens) and sexual partnerships (e.g. anglerfish) as organisms.If group selection occurs, then a group could be viewed as a superorganism, optimized by group adaptation.
+        
+        Another view is that attributes like autonomy, genetic homogeneity and genetic uniqueness should be examined separately rather than demanding that an organism should have all of them; if so, there are multiple dimensions to biological individuality, resulting in several types of organism.
+        </p>
+    </section>
+
+    <section id="organisation-levels" class="grid-item">
+        <h2 style="font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #000;">Organisms at differing levels</h2>
+
+        <div style="float: right; width: 250px; border: 1px solid #ccc; padding: 10px; margin-left: 20px; text-align: center;">
+        
+            <img src="Lichen.png" alt="Lichen structure" style="max-width: 100%; height: auto; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 10px;">
+            
+            <p style="font-size: 0.9rem; text-align: left;">
+                A lichen consists of a body formed mainly byfungi, with unicellular algae or cyanobacteria(green) interspersed within the structure, and a bacterial microbiome. Thespecies are mutually interdependent, like cells within a multicellular organism.
+            </p>
+        </div>
+
+
+        <p>A unicellular organism is a microorganism such as a protist, bacterium, or archaean, composed of a single cell, which may contain functional structures called organelles.</p>
+
+        <p>A multicellular organism such as an animal, plant, fungus, or alga is composed of many cells, often specialised.</p>
+
+        <p>A colonial organism such as a siphonophore is a being which functions as an individual but is composed of communicating individuals.</p>
+            
+        <p>A superorganism is a colony, such as of ants, consisting of many individuals working together as a single functional or social unit.</p>
+            
+        <p>A mutualism is a partnership of two or more species which each provide some of the needs of the other. A lichen consists of fungi and algae or cyanobacteria, with a bacterial microbiome; together, they are able to flourish as a kind of organism, the components having different functions, in habitats such as dry rocks where neither could grow alone.</p>
+            
+        <p>The evolutionary biologists David Queller and Joan Strassmann state that "organismality" has evolved socially, as groups of simpler units (from cells upwards) came to cooperate without conflicts. They propose that cooperation should be used as the "defining trait" of an organism.</p>
+            
+
+        <table cellspacing="0" cellpadding="10" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; vertical-align: middle;">Level</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; vertical-align: middle;">Example</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; vertical-align: middle;">Composition</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; vertical-align: middle;">Metabolism, growth, reproduction</th>
+                    <th style="border: 1px solid #000; padding: 8px; text-align: center; vertical-align: middle;">Co-operation</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                
+                <caption><strong>Queller and Strassmann's view of organisms as cooperating entities at differing levels of biological organisation</strong></caption>
+                
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Virus</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Tobacco mosaic virus</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Nucleic acid, protein</td>
+                    <td style="border: 1px solid #000; padding: 8px;">No</td>
+                    <td style="border: 1px solid #000; padding: 8px;">No metabolism, so not living, not an organism, say many biologists;but they evolve, their genes collaborating to manipulate the host</td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Unicellular organism</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Paramecium</td>
+                    <td style="border: 1px solid #000; padding: 8px;">One cell, with organelles e.g. cilia for specific functions</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Yes</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Inter-cellular (inter-organismal) signalling</td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Swarming protistan</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Dictyostelium (cellular slime mould)</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Unicellular amoebae</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Yes</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Free-living unicellular amoebae for most of lifetime; swarm and aggregate to a multicellular slug, cells specialising to form a dead stalk and a fruiting body</td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Multicellular organism</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Mushroom-forming fungus</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Cells, grouped into organs for specific functions (e.g. reproduction)</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Yes</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Cell specialisation, communication</td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Permanent sexual partnership</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Anglerfish</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Male and female permanently fastened together</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Yes</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Male provides male gametes; female provides all other functions</td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Mutualism</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Lichen</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Organisms of different speciesr</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Yes</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Fungus provides structure, absorbs water and minerals; alga photosynthesises</td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Joined colony</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Siphonophore</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Zooids joined together</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Yes</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Organism specialisation; inter-organism signalling</td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px;">Superorganism</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Ant colony</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Individuals living together</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Yes</td>
+                    <td style="border: 1px solid #000; padding: 8px;">Organism specialisation (many ants do not reproduce); inter-organism signalling</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <p>Samuel Díaz‐Muñoz and colleagues (2016) accept Queller and Strassmann's view that organismality can be measured wholly by degrees of cooperation and of conflict. They state that this situates organisms in evolutionary time, so that organismality is context dependent. They suggest that highly integrated life forms, which are not context dependent, may evolve through context-dependent stages towards complete unification.</p>
+    </section>
+
+        <section id="boundary-cases" class="grid-item">
+            <h2 style="font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #000;">Boundary cases</h2>
+            
+            <section id="viruses">
+                <h3 style="font-weight: bold;">Viruses</h3>
+                <div style="float: right; width: 250px; border: 1px solid #ccc; padding: 10px; margin-left: 20px; text-align: center;">
+                    <img src="TMV.png" alt="Virus structure" style="max-width: 100%; height: auto; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 10px;">
+                    <p style="font-size: 0.9rem;">A virus such as <a href="https://en.wikipedia.org/wiki/Tobacco_mosaic_virus">tobacco mosaic virus</a> is not a cell; it contains only its genetic material, and a protein coat.</p>
+                </div>
+                <p>Viruses are not typically considered to be organisms, because they are incapable of autonomous reproduction,growth,metabolism, or homeostasis. Although viruses have a few and molecules like those in living organisms, they have no metabolism of their own; they cannot synthesize the organic compounds from which they are formed. In this sense, they are similar to inanimate matter.Viruses have their own genes, and they evolve. Thus, an argument that viruses should be classed as living organisms is their ability to undergo evolution and replicate through self-assembly.</p>
+        
+                <p>However, some scientists argue that viruses neither evolve nor self-reproduce. Instead, viruses are evolved by their host cells, meaning that there was co-evolution of viruses and host cells. If host cells did not exist, viral evolution would be impossible. As for reproduction, viruses rely on hosts' machinery to replicate.</p>
+            
+                <p>The discovery of viruses with genes coding for energy metabolism and protein synthesis fueled the debate about whether viruses are living organisms, but the genes have a cellular origin. Most likely, they were acquired through horizontal gene transfer from viral hosts.
+
+                    <div style="margin-top: 30px;">
+                        <h3 style="font-weight: bold;">Synthetic organisms</h3>
+                    
+                        <div style="float: right; width: 250px; border: 1px solid #ccc; padding: 10px; margin-left: 20px; text-align: center;">
+                            <img src="Insect_cyborg.jpg" style="max-width: 90%;">
+                            <p style="font-size: 0.9rem;">Insect cyborg</p>
+                        </div>
+                    
+                        <div style="clear: both;"></div>
+                    
+                        <p>Scientists and bio-engineers are experimenting with different types of synthetic organism, from chimaeras composed of cells from two or more species, cyborgs including electromechanical limbs, hybrots containing both electronic and biological elements, and other combinations of systems that have variously evolved and been designed.
+
+                            An evolved organism takes its form by the partially understood mechanisms of evolutionary developmental biology, in which the genome directs an elaborated series of interactions to produce successively more elaborate structures. The existence of chimaeras and hybrids demonstrates that these mechanisms are "intelligently" robust in the face of radically altered circumstances at all levels from molecular to organismal.
+                            
+                            Synthetic organisms already take diverse forms, and their diversity will increase. What they all have in common is a teleonomic or goal-seeking behaviour that enables them to correct errors of many kinds so as to achieve whatever result they are designed for. Such behaviour is reminiscent of intelligent action by organisms; intelligence is seen as an embodied form of cognition.</p>
+                    </div>
+                    
+            </section>
+            </div>
+        
+
+        <section id="early-evolution-of-organisms" class="grid-item">
+            <h2 style="font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #000;">Early evolution of organisms</h2>
+        <p>All organisms that exist today possess a self-replicating informational molecule (genome), and such an informational molecule is likely intrinsic to life. Thus, the earliest organisms also presumably possessed a self-replicating informational molecule (genome), perhaps RNA[28][29] or an informational molecule more primitive than RNA. The specific nucleotide sequences in all currently extant organisms contain information that functions to promote survival, reproduction, and the ability to acquire resources necessary for reproduction, and sequences with such functions probably emerged early in the evolution of life. It is also likely that survival sequences present early in the evolution of organisms included sequences that facilitate the avoidance of damage to the self-replicating molecule and promote the capability to repair such damages that do occur. Repair of some of the genome damages in these early organisms may have involved the capacity to use undamaged information from another similar genome by a process of recombination (a primitive form of sexual interaction).</p>
+
+    </section>
+
+    <section id="references" class="grid-item">
+        <h2 style="font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid #000;">References</h2>
+        <p>For more in-depth details on organisms, please visit the <a href="https://en.wikipedia.org/wiki/Organism" target="_blank">Wikipedia page on Organisms</a>.</p>
+    </section>
+
+    <section>
+        <h4>Quick Facts about Organisms</h4>
+        <ul>
+            <li><strong>Oldest Organism:</strong> The oldest living organism is a Great Basin bristlecone pine tree, estimated to be over 5,000 years old!</li>
+            <li><strong>Largest Organism:</strong> The largest living organism on Earth is a fungus in Oregon that spans over 3.4 square miles.</li>
+            <li><strong>Fastest Organism:</strong> The peregrine falcon is the fastest bird, capable of diving at speeds over 240 mph.</li>
+        </ul>
+    </section>
+
+</div>
+
+
+</body>
+</html>
