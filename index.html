@@ -4,18 +4,149 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Type + Code Project 1</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			background-image: url('https://en.wikipedia.org/static/images/icons/wikipedia.png');
+			background-repeat: repeat-x;
+			animation: scrollBackground 10s linear infinite;
+		}
+
+		@keyframes scrollBackground {
+			0% {
+				background-position: 0 0;
+			}
+			100% {
+				background-position: 100% 0;
+			}
+		}
+
+
+		.tag-container {
+			position: relative;
+			width: 150px;
+			height: 350px;
+			background-color: #f4f4f4;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+			transform: rotate(-15deg);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+	
+		.string {
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			width: 2px;
+			height: 30px;
+			background-color: #ccc;
+			transform: translateX(-50%);
+		}
+
+
+		.hole {
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: white;
+			border: 2px solid #ccc;
+		}
+
+	
+		.tag-container:hover {
+			transform: rotate(-12deg) translateY(-10px);
+			box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+		}
+
+
+		.tag-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			padding: 20px;
+			overflow: hidden;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+			color: #444;
+			overflow: hidden;
+			white-space: nowrap;
+			box-sizing: border-box;
+			width: 200%;
+			animation: scroll 10s linear infinite;
+		}
+
+		@keyframes scroll {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		h2 {
+			font-size: 1rem;
+			color: #777;
+			margin-bottom: 20px;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #3498db;
+			font-size: 1rem;
+		}
+
+		a:hover {
+			color: #2c3e50;
+		}
+
+	</style>
 </head>
 <body>
-	
-	<h1>Type + Code Project 1</h1>
-	<h2>Justin Xiao</h2>
 
-	<ul>
-		<li><a href="" target="_blank">Link to the original article</a></li>
-		<li><a href="v1/">Version 1</a></li>
-		<li><a href="v2/">Version 2</a></li>
-		<li><a href="v3/">Version 3</a></li>
-	</ul>
+	<div class="tag-container">
+		<div class="string"></div>
+		<div class="hole"></div>
+		<div class="tag-content">
+			<h1>Time Traveller</h1>
+			<h2>Justin Xiao</h2>
+			<ul>
+				<li><a href="https://en.wikipedia.org/wiki/Organism" target="_blank">original article</a></li>
+				<li><a href="v1/">only HTML</a></li>
+				<li><a href="v2/">version2</a></li>
+				<li><a href="v3/">version3</a></li>
+			</ul>
+		</div>
+	</div>
 
 </body>
 </html>
